@@ -1,5 +1,5 @@
 package messenger;
 
-public class DataGenerator {
-
+public class DataGenerator 
+{
 }
