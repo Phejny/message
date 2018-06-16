@@ -1,6 +1,7 @@
 package messenger;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
@@ -45,7 +46,7 @@ public class Hbase
 	/**
 	 * Schließt die Verbindung und den htable.
 	 */
-	public void close()
+	public void closeAll()
 	{
 		try 
 		{
@@ -57,6 +58,31 @@ public class Hbase
 			System.out.println(e.toString());
 		}
 		
+	}
+	
+	/**
+	 * 
+	 */
+	@SuppressWarnings("deprecation")
+	public void setChatRecord(String userId, String empfaenger, String message)
+	{
+		LocalDateTime ldt = LocalDateTime.now();
+		String local = ldt.toString();
+		
+		try 
+		{
+			Put pe = new Put(Bytes.toBytes(userId));
+			pe.add(Bytes.toBytes("Chat"), Bytes.toBytes("Empfaenger"), Bytes.toBytes(empfaenger));
+			htable.put(pe);
+			
+			Put pn = new Put(Bytes.toBytes(userId));
+			pn.add(Bytes.toBytes("Chat"), Bytes.toBytes(local), Bytes.toBytes(message));
+			htable.put(pn);
+		} 
+		catch (IOException e) 
+		{
+			System.out.println(e.toString());
+		}
 	}
 	
 	/**
@@ -88,11 +114,12 @@ public class Hbase
 	}
 	
 	/**
+	 * Hilfsmethode
 	 * Ueberprueft ob User schon vorhanden ist.
 	 * @param userid UserId
 	 * @return
 	 */
-	private String getUser(String userid) 
+	public String getUser(String userid) 
 	{
 		System.out.println("Suche nach: "+userid);
 		String user = "User nicht vorhanden.";
@@ -150,7 +177,7 @@ public class Hbase
 	 * @param tel Telefonnummer
 	 * @param mail Emailadresse
 	 */
-	public void setUser(String uid, String vname, String nname, String adress, String tel, String mail)
+	public void setUser(String uid, String vname, String nname, String alter, String adress, String tel, String mail)
 	{
 		String u = getUser(uid);
 		
@@ -160,6 +187,7 @@ public class Hbase
 			
 			putUser(uid, "Vorname", vname);
 			putUser(uid, "Nachname", nname);
+			putUser(uid, "Alter", alter);
 			putUser(uid, "Adress", adress);
 			putUser(uid, "Telefon", tel);
 			putUser(uid, "E-Mail", mail);
@@ -170,5 +198,13 @@ public class Hbase
 		{
 			System.out.println("User Vorhanden");
 		}
+	}
+	
+	/**
+	 * 
+	 */
+	public void getPersonalData()
+	{
+		//TODO
 	}
 }
