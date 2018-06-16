@@ -1,5 +1,6 @@
 package messenger;
 
-public class NichtKunde {
-
+public class NichtKunde 
+{
+	
 }
