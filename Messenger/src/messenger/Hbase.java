@@ -14,7 +14,6 @@ import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.client.ResultScanner;
 import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.Table;
-import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
 import org.apache.hadoop.hbase.filter.BinaryComparator;
 import org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
 import org.apache.hadoop.hbase.filter.RowFilter;
@@ -78,6 +77,8 @@ public class Hbase
 			Put pn = new Put(Bytes.toBytes(userId));
 			pn.add(Bytes.toBytes("Chat"), Bytes.toBytes(local), Bytes.toBytes(message));
 			htable.put(pn);
+			
+			System.out.println("Chatverlauf gespeichert.");
 		} 
 		catch (IOException e) 
 		{
@@ -104,7 +105,6 @@ public class Hbase
 			String rec = Bytes.toString(record);
 			
 			System.out.println("Empfaenger: "+ef);
-			System.out.println("");
 			System.out.println("Verlauf: "+rec);
 		}
 		catch (IOException e)
@@ -173,6 +173,7 @@ public class Hbase
 	 * @param uid UserId
 	 * @param vname Vorname
 	 * @param nname Nachanme
+	 * @param alter Alter
 	 * @param adress Adresse
 	 * @param tel Telefonnummer
 	 * @param mail Emailadresse
@@ -183,7 +184,7 @@ public class Hbase
 		
 		if(!u.equals(uid))
 		{
-			System.out.println("User nicht vorhanden. Wird anglegt ...");
+			System.out.println("User wird anglegt ...");
 			
 			putUser(uid, "Vorname", vname);
 			putUser(uid, "Nachname", nname);

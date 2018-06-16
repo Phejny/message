@@ -9,6 +9,7 @@ public class NichtKunde
 	private String adress;
 	private String telefon;
 	private String eMail;
+	private Hbase h;
 	
 	/**
 	 * Initialisert einen NichtKunden
@@ -22,6 +23,13 @@ public class NichtKunde
 		adress = adr;
 		telefon = tel;
 		eMail = email;
+		
+		h = new Hbase();
+		
+		if(testeObVorhanden() == false)
+		{
+			h.setUser(userId, vorname, nachname, alter, adress, telefon, eMail);
+		}
 	}
 	
 	/**
@@ -32,15 +40,28 @@ public class NichtKunde
 		Hbase h = new Hbase();
 		h.setChatRecord(userId, empfaenger.getuserId(), message);
 		h.closeAll();
-		
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	private boolean testeObVorhanden()
+	{
+		boolean b = false;
+		if(h.getUser(this.userId).equals(this.userId))
+		{
+			b = true;
+		}
+		return b;
 	}
 	
 	/**
 	 * 
 	 */
-	public void empfangeNachricht()
+	public void empfangeNachricht(String ts)
 	{
-		
+		h.getChatRecord(this.userId, ts);
 	}
 	
 	public String getuserId()
