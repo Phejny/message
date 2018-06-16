@@ -68,4 +68,9 @@ public class NichtKunde
 	{
 		return userId;
 	}
+	
+	public void PersonalData()
+	{
+		h.getPersonalData(this.userId);
+	}
 }

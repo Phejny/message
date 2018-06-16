@@ -204,8 +204,37 @@ public class Hbase
 	/**
 	 * 
 	 */
-	public void getPersonalData()
+	public void getPersonalData(String userid) 
 	{
-		//TODO
+		try 
+		{
+			Get g = new Get(Bytes.toBytes(userid));
+			Result result = htable.get(g);
+						
+			byte [] vn = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("Vorname"));
+			byte [] nn = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("Nachname"));
+			byte [] age = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("Alter"));
+			byte [] adr = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("Adress"));
+			byte [] tel = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("Telefon"));
+			byte [] mail = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("E-Mail"));
+			
+			String vns = Bytes.toString(vn); 
+			String nns = Bytes.toString(nn);
+			String ages = Bytes.toString(age); 
+			String adrs = Bytes.toString(adr);
+			String tels = Bytes.toString(tel); 
+			String mails = Bytes.toString(mail);
+			
+			System.out.println("Vorname: "+vns);
+			System.out.println("Nachname: "+nns);
+			System.out.println("Alter: "+ages);
+			System.out.println("Adresse: "+adrs);
+			System.out.println("Telefon: "+tels);
+			System.out.println("E-Mail: "+mails);
+		}
+		catch (IOException e)
+		{
+			System.out.println(e.toString());
+		}
 	}
 }
