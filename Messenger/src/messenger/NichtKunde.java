@@ -59,9 +59,9 @@ public class NichtKunde
 	/**
 	 * 
 	 */
-	public void empfangeNachricht(String ts)
+	public void gesendeteNachrichten(String ts)
 	{
-		h.getChatRecord(this.userId, ts);
+		h.getSentMessages(this.userId, ts);
 	}
 	
 	public String getuserId()
@@ -69,7 +69,7 @@ public class NichtKunde
 		return userId;
 	}
 	
-	public void PersonalData()
+	public void seePersonalData()
 	{
 		h.getPersonalData(this.userId);
 	}

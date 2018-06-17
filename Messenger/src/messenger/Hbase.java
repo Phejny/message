@@ -15,8 +15,14 @@ import org.apache.hadoop.hbase.client.ResultScanner;
 import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.filter.BinaryComparator;
+import org.apache.hadoop.hbase.filter.ColumnPrefixFilter;
 import org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
+import org.apache.hadoop.hbase.filter.FamilyFilter;
+import org.apache.hadoop.hbase.filter.Filter;
+import org.apache.hadoop.hbase.filter.FilterList;
+import org.apache.hadoop.hbase.filter.RegexStringComparator;
 import org.apache.hadoop.hbase.filter.RowFilter;
+import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
 import org.apache.hadoop.hbase.util.Bytes;
 
 
@@ -87,11 +93,11 @@ public class Hbase
 	}
 	
 	/**
-	 * Liefert den Chatverlauf und Empfaenger einse Users
+	 * Liefert die gesendeten Nachrichten und Empfaenger einse Users
 	 * @param userid - User
 	 * @param time - Datum und Uhrzeit des Chatverlaufs
 	 */
-	public void getChatRecord(String userid, String time) 
+	public void getSentMessages(String userid, String time) 
 	{
 		try 
 		{
@@ -110,6 +116,36 @@ public class Hbase
 		catch (IOException e)
 		{
 			System.out.println(e.toString());
+		}
+	}
+	
+	
+	public void getRecievedMessages(String uid)
+	{
+		try 
+		{
+			Scan scan = new Scan();
+			FilterList fList = new FilterList();
+			
+			
+			Filter filterA = new SingleColumnValueFilter(Bytes.toBytes("Chat"), Bytes.toBytes("Empfaenger"), CompareOp.EQUAL, Bytes.toBytes(uid));
+			Filter filterB = new ColumnPrefixFilter(Bytes.toBytes("2018"));
+			
+			fList.addFilter(filterA);
+			fList.addFilter(filterB);
+			scan.setFilter(fList);
+			
+			try(ResultScanner scanner = htable.getScanner(scan))
+			{
+				for(Result r : scanner )
+				{
+					System.out.println("Absender: "+ new String(r.getRow())+" Nachricht: "+new String(r.value()));
+				}
+			}					
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
 		}
 	}
 	
@@ -143,7 +179,6 @@ public class Hbase
 			System.out.println(e.toString());
 		}
 		
-		System.out.println(user);
 		return user;
 	}
 	
