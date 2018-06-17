@@ -9,8 +9,7 @@ public class StartUp
 		
 		
 		Hbase hb = new Hbase();
-		
-		hb.getRecievedMessages("Lars2");
+	
 		
 	}
 }
