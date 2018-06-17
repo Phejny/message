@@ -18,16 +18,9 @@ import org.apache.hadoop.hbase.client.ResultScanner;
 import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.filter.BinaryComparator;
-import org.apache.hadoop.hbase.filter.ColumnPrefixFilter;
 import org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
-import org.apache.hadoop.hbase.filter.Filter;
-import org.apache.hadoop.hbase.filter.FilterList;
-import org.apache.hadoop.hbase.filter.RegexStringComparator;
 import org.apache.hadoop.hbase.filter.RowFilter;
-import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
 import org.apache.hadoop.hbase.util.Bytes;
-
-import com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader.Single;
 
 
 public class Hbase 
@@ -55,13 +48,28 @@ public class Hbase
 	/**
 	 * 
 	 */
-	public void setChatRecord(String userId, String empfaenger, String message) throws IOException
+	public void setChatRecordSent(String userId, String empfaenger, String message) throws IOException
 	{
 		LocalDateTime ldt = LocalDateTime.now();
 		String local = ldt.toString();
 				
 		Put pn = new Put(Bytes.toBytes(userId));
-		pn.addColumn(Bytes.toBytes("Chat"), Bytes.toBytes(local),Bytes.toBytes("An: "+empfaenger+" gesendet am: "+local+" "+message));
+		pn.addColumn(Bytes.toBytes("Chat"), Bytes.toBytes("gesendet_"+local),Bytes.toBytes("An: "+empfaenger+" gesendet am: "+local+" "+message));
+		htable.put(pn);
+		
+		System.out.println("Chatverlauf gespeichert.");
+	}
+	
+	/**
+	 * 
+	 */
+	public void setChatRecordRecieved(String userId, String empfaenger, String message) throws IOException
+	{
+		LocalDateTime ldt = LocalDateTime.now();
+		String local = ldt.toString();
+				
+		Put pn = new Put(Bytes.toBytes(empfaenger));
+		pn.addColumn(Bytes.toBytes("Chat"), Bytes.toBytes("empfangen_"+local),Bytes.toBytes("Von: "+userId+" gesendet am: "+local+" "+message));
 		htable.put(pn);
 		
 		System.out.println("Chatverlauf gespeichert.");
@@ -73,8 +81,7 @@ public class Hbase
 	 * @param time - Datum und Uhrzeit des Chatverlaufs
 	 * @throws IOException 
 	 */
-
-	public void getSentMessages(String userid) throws IOException 
+	public void getMessages(String userid) throws IOException 
 	{
 		List<String> list = listOfQualifiers(userid, "Chat");
 		

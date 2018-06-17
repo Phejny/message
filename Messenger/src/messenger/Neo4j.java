@@ -1,5 +1,6 @@
 package messenger;
 
-public class Neo4j {
+public class Neo4j 
+{
 
 }

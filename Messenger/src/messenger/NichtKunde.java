@@ -42,7 +42,8 @@ public class NichtKunde
 	public void schreibeNachricht(String message, NichtKunde empfaenger) throws IOException
 	{
 		Hbase h = new Hbase();
-		h.setChatRecord(userId, empfaenger.getuserId(), message);
+		h.setChatRecordSent(userId, empfaenger.getuserId(), message);
+		h.setChatRecordRecieved(userId, empfaenger.getuserId(), message);
 		h.closeAll();
 	}
 	
@@ -65,9 +66,9 @@ public class NichtKunde
 	 * @throws IOException 
 	 * 
 	 */
-	public void gesendeteNachrichten(String ts) throws IOException
+	public void getNachrichten() throws IOException
 	{
-		h.getSentMessages(this.userId);
+		h.getMessages(this.userId);
 	}
 	
 	public String getuserId()
