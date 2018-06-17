@@ -1,5 +1,7 @@
 package messenger;
 
+import java.io.IOException;
+
 public class NichtKunde 
 {
 	private String userId;
@@ -13,8 +15,9 @@ public class NichtKunde
 	
 	/**
 	 * Initialisert einen NichtKunden
+	 * @throws IOException 
 	 */
-	public NichtKunde(String uid, String vn, String nn, String age, String adr, String tel, String email)
+	public NichtKunde(String uid, String vn, String nn, String age, String adr, String tel, String email) throws IOException
 	{
 		userId = uid;
 		vorname = vn;
@@ -33,9 +36,10 @@ public class NichtKunde
 	}
 	
 	/**
+	 * @throws IOException 
 	 * 
 	 */
-	public void schreibeNachricht(String message, NichtKunde empfaenger)
+	public void schreibeNachricht(String message, NichtKunde empfaenger) throws IOException
 	{
 		Hbase h = new Hbase();
 		h.setChatRecord(userId, empfaenger.getuserId(), message);
@@ -45,8 +49,9 @@ public class NichtKunde
 	/**
 	 * 
 	 * @return
+	 * @throws IOException 
 	 */
-	private boolean testeObVorhanden()
+	private boolean testeObVorhanden() throws IOException
 	{
 		boolean b = false;
 		if(h.getUser(this.userId).equals(this.userId))
@@ -57,11 +62,12 @@ public class NichtKunde
 	}
 	
 	/**
+	 * @throws IOException 
 	 * 
 	 */
-	public void gesendeteNachrichten(String ts)
+	public void gesendeteNachrichten(String ts) throws IOException
 	{
-		h.getSentMessages(this.userId, ts);
+		h.getSentMessages(this.userId);
 	}
 	
 	public String getuserId()
@@ -69,7 +75,7 @@ public class NichtKunde
 		return userId;
 	}
 	
-	public void seePersonalData()
+	public void seePersonalData() throws IOException
 	{
 		h.getPersonalData(this.userId);
 	}

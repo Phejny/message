@@ -2,6 +2,9 @@ package messenger;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NavigableMap;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
@@ -17,13 +20,14 @@ import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.filter.BinaryComparator;
 import org.apache.hadoop.hbase.filter.ColumnPrefixFilter;
 import org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
-import org.apache.hadoop.hbase.filter.FamilyFilter;
 import org.apache.hadoop.hbase.filter.Filter;
 import org.apache.hadoop.hbase.filter.FilterList;
 import org.apache.hadoop.hbase.filter.RegexStringComparator;
 import org.apache.hadoop.hbase.filter.RowFilter;
 import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
 import org.apache.hadoop.hbase.util.Bytes;
+
+import com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader.Single;
 
 
 public class Hbase 
@@ -32,121 +36,63 @@ public class Hbase
 	private Table htable;
 	
 	
-	public Hbase()
+	public Hbase() throws IOException
 	{
 		Configuration conf = HBaseConfiguration.create();
-		
-		try 
-		{
-			con = ConnectionFactory.createConnection(conf);
-			htable = con.getTable(TableName.valueOf("NichtKunden"));			
-		} 
-		catch (IOException e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		con = ConnectionFactory.createConnection(conf);
+		htable = con.getTable(TableName.valueOf("NichtKunden"));			
 	}
 	
 	/**
 	 * Schließt die Verbindung und den htable.
 	 */
-	public void closeAll()
+	public void closeAll() throws IOException
 	{
-		try 
-		{
-			htable.close();
-			con.close();
-		} 
-		catch (IOException e) 
-		{
-			System.out.println(e.toString());
-		}
-		
+		htable.close();
+		con.close();
 	}
 	
 	/**
 	 * 
 	 */
-	@SuppressWarnings("deprecation")
-	public void setChatRecord(String userId, String empfaenger, String message)
+	public void setChatRecord(String userId, String empfaenger, String message) throws IOException
 	{
 		LocalDateTime ldt = LocalDateTime.now();
 		String local = ldt.toString();
+				
+		Put pn = new Put(Bytes.toBytes(userId));
+		pn.addColumn(Bytes.toBytes("Chat"), Bytes.toBytes(local),Bytes.toBytes("An: "+empfaenger+" gesendet am: "+local+" "+message));
+		htable.put(pn);
 		
-		try 
-		{
-			Put pe = new Put(Bytes.toBytes(userId));
-			pe.add(Bytes.toBytes("Chat"), Bytes.toBytes("Empfaenger"), Bytes.toBytes(empfaenger));
-			htable.put(pe);
-			
-			Put pn = new Put(Bytes.toBytes(userId));
-			pn.add(Bytes.toBytes("Chat"), Bytes.toBytes(local), Bytes.toBytes(message));
-			htable.put(pn);
-			
-			System.out.println("Chatverlauf gespeichert.");
-		} 
-		catch (IOException e) 
-		{
-			System.out.println(e.toString());
-		}
+		System.out.println("Chatverlauf gespeichert.");
 	}
 	
 	/**
 	 * Liefert die gesendeten Nachrichten und Empfaenger einse Users
 	 * @param userid - User
 	 * @param time - Datum und Uhrzeit des Chatverlaufs
+	 * @throws IOException 
 	 */
-	public void getSentMessages(String userid, String time) 
+
+	public void getSentMessages(String userid) throws IOException 
 	{
-		try 
+		List<String> list = listOfQualifiers(userid, "Chat");
+		
+		for(String s : list)
 		{
-			Get g = new Get(Bytes.toBytes(userid));
-			Result result = htable.get(g);
-						
-			byte [] empfaenger = result.getValue(Bytes.toBytes("Chat"), Bytes.toBytes("Empfaenger"));
-			byte [] record = result.getValue(Bytes.toBytes("Chat"), Bytes.toBytes(time));
-			
-			String ef = Bytes.toString(empfaenger); 
-			String rec = Bytes.toString(record);
-			
-			System.out.println("Empfaenger: "+ef);
-			System.out.println("Verlauf: "+rec);
-		}
-		catch (IOException e)
-		{
-			System.out.println(e.toString());
+			findValuesWithQualifier("Chat", s);
 		}
 	}
 	
-	
-	public void getRecievedMessages(String uid)
+	public List<String> getRowKeys() throws IOException
 	{
-		try 
-		{
-			Scan scan = new Scan();
-			FilterList fList = new FilterList();
-			
-			
-			Filter filterA = new SingleColumnValueFilter(Bytes.toBytes("Chat"), Bytes.toBytes("Empfaenger"), CompareOp.EQUAL, Bytes.toBytes(uid));
-			Filter filterB = new ColumnPrefixFilter(Bytes.toBytes("2018"));
-			
-			fList.addFilter(filterA);
-			fList.addFilter(filterB);
-			scan.setFilter(fList);
-			
-			try(ResultScanner scanner = htable.getScanner(scan))
-			{
-				for(Result r : scanner )
-				{
-					System.out.println("Absender: "+ new String(r.getRow())+" Nachricht: "+new String(r.value()));
-				}
-			}					
-		} 
-		catch (IOException e) 
-		{
-			e.printStackTrace();
+		List<String> rlist = new ArrayList<>();
+		Scan scan = new Scan();
+		ResultScanner rscanner = htable.getScanner(scan);
+		for(Result r : rscanner){
+		   rlist.add(new String(r.getRow()));
 		}
+		return rlist;
 	}
 	
 	/**
@@ -155,30 +101,22 @@ public class Hbase
 	 * @param userid UserId
 	 * @return
 	 */
-	public String getUser(String userid) 
+	public String getUser(String userid) throws IOException
 	{
 		System.out.println("Suche nach: "+userid);
 		String user = "User nicht vorhanden.";
-		try
-		{
-			Scan scan = new Scan();
-			RowFilter filter = new RowFilter(CompareOp.EQUAL, new BinaryComparator(Bytes.toBytes(userid)));
-			scan.setFilter(filter);                                        
-			
-			try(ResultScanner scanner = htable.getScanner(scan))
-			{
-				for(Result r : scanner )
-				{
-					user = new String(r.getRow());
-				}
-			}						
-						
-		} 
-		catch (IOException e) 
-		{
-			System.out.println(e.toString());
-		}
 		
+		Scan scan = new Scan();
+		RowFilter filter = new RowFilter(CompareOp.EQUAL, new BinaryComparator(Bytes.toBytes(userid)));
+		scan.setFilter(filter);                                        
+		
+		ResultScanner scanner = htable.getScanner(scan);
+	
+		for(Result r : scanner )
+		{
+			user = new String(r.getRow());
+		}
+										
 		return user;
 	}
 	
@@ -188,19 +126,11 @@ public class Hbase
 	 * @param column
 	 * @param value
 	 */
-	@SuppressWarnings("deprecation")
-	private void putUser(String id, String column, String value)
+	private void putUser(String id, String column, String value) throws IOException
 	{
-		try 
-		{
-			Put p = new Put(Bytes.toBytes(id));
-			p.add(Bytes.toBytes("PersonalData"), Bytes.toBytes(column), Bytes.toBytes(value));
-			htable.put(p);
-		} 
-		catch (IOException e) 
-		{
-			System.out.println(e.toString());
-		}
+		Put p = new Put(Bytes.toBytes(id));
+		p.addColumn(Bytes.toBytes("PersonalData"), Bytes.toBytes(column), Bytes.toBytes(value));
+		htable.put(p);
 	}
 	
 	/**
@@ -212,8 +142,9 @@ public class Hbase
 	 * @param adress Adresse
 	 * @param tel Telefonnummer
 	 * @param mail Emailadresse
+	 * @throws IOException 
 	 */
-	public void setUser(String uid, String vname, String nname, String alter, String adress, String tel, String mail)
+	public void setUser(String uid, String vname, String nname, String alter, String adress, String tel, String mail) throws IOException
 	{
 		String u = getUser(uid);
 		
@@ -239,7 +170,7 @@ public class Hbase
 	/**
 	 * 
 	 */
-	public void getPersonalData(String userid) 
+	public void getPersonalData(String userid) throws IOException
 	{
 		try 
 		{
@@ -271,5 +202,52 @@ public class Hbase
 		{
 			System.out.println(e.toString());
 		}
+	}
+	
+	public List<String> listOfQualifiers(String row, String columnFamily) throws IOException
+	{
+		Get g = new Get(Bytes.toBytes(row));
+		Result result = htable.get(g);
+		NavigableMap<byte[], byte[]> qualifiers = result.getFamilyMap(Bytes.toBytes(columnFamily));
+		List<String> qualifNames = new ArrayList<>();
+		for(byte[] qualifier : qualifiers.keySet())
+		{
+			qualifNames.add(Bytes.toString(qualifier));
+		}
+		return qualifNames;
+	}
+	
+	public void printQualifiers(String row, String columnFamily) throws IOException
+	{
+		for(String qualifier : listOfQualifiers(row, columnFamily))
+		{
+			System.out.println(qualifier);
+		}
+	}
+	
+	public List<String> findValuesWithQualifier(String columnFamily, String qualifier) throws IOException
+	{
+		Scan s = new Scan();
+		s.addColumn(Bytes.toBytes(columnFamily), Bytes.toBytes(qualifier));
+		ResultScanner scanner = htable.getScanner(s);
+		List<String> valList = new ArrayList<String>();
+		for (Result r : scanner)
+		{
+			System.out.println((Bytes.toString(r.value())));
+		}
+		return valList;
+	}
+	
+	public List<String> findRowsWithQualifier(String columnFamily, String qualifier) throws IOException
+	{
+		Scan s = new Scan();
+		s.addColumn(Bytes.toBytes(columnFamily), Bytes.toBytes(qualifier));
+		ResultScanner scanner = htable.getScanner(s);
+		List<String> rowList = new ArrayList<String>();
+		for (Result r : scanner)
+		{
+			rowList.add(Bytes.toString(r.getRow()));
+		}
+		return rowList;
 	}
 }
