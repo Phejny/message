@@ -1,10 +1,17 @@
 package messenger;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NavigableMap;
+
+import javax.imageio.ImageIO;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
@@ -73,6 +80,34 @@ public class Hbase
 		htable.put(pn);
 		
 		System.out.println("Chatverlauf gespeichert.");
+	}
+	
+	public void putImage(String uid, String imageName) throws IOException
+	{
+		File f = new File("/home/nosql/Pictures/"+imageName);
+		BufferedImage bi = ImageIO.read(f);
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		ImageIO.write(bi, "jpg", baos);
+		byte[] imageInBytes = baos.toByteArray();
+		
+		Put pn = new Put(Bytes.toBytes(uid));
+		pn.addColumn(Bytes.toBytes("Data"), Bytes.toBytes(imageName), imageInBytes);
+		htable.put(pn);
+		
+		System.out.println("Image gespeichert.");
+	}
+	
+	public void getImage(String uid, String imageName) throws IOException
+	{
+		Get g = new Get(Bytes.toBytes(uid));
+		Result result = htable.get(g);
+		
+		byte [] imageInByte = result.getValue(Bytes.toBytes("Data"), Bytes.toBytes(imageName));
+		InputStream in = new ByteArrayInputStream(imageInByte);
+		BufferedImage bi = ImageIO.read(in);
+		ImageIO.write(bi, "jpg", new File("/home/nosql/Pictures/new-"+imageName));
+		
+		System.out.println("Image geladen.");
 	}
 	
 	/**
