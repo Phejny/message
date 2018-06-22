@@ -1,6 +1,7 @@
 package messenger;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class NichtKunde 
 {
@@ -11,13 +12,15 @@ public class NichtKunde
 	private String adress;
 	private String telefon;
 	private String eMail;
+	private String hhobby;
 	private Hbase h;
 	
 	/**
 	 * Initialisert einen NichtKunden
 	 * @throws IOException 
+	 * @throws SQLException 
 	 */
-	public NichtKunde(String uid, String vn, String nn, String age, String adr, String tel, String email) throws IOException
+	public NichtKunde(String uid, String vn, String nn, String age, String adr, String tel, String email, String hobby) throws IOException, SQLException
 	{
 		userId = uid;
 		vorname = vn;
@@ -26,12 +29,15 @@ public class NichtKunde
 		adress = adr;
 		telefon = tel;
 		eMail = email;
+		hhobby = hobby;
 		
 		h = new Hbase();
 		
 		if(testeObVorhanden() == false)
 		{
-			h.setUser(userId, vorname, nachname, alter, adress, telefon, eMail);
+			h.setUser(userId, vorname, nachname, alter, adress, telefon, eMail, hhobby);
+			Neo4j n = new Neo4j();
+			n.setUser(this.userId, this.hhobby);
 		}
 	}
 	

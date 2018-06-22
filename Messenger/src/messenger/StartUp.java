@@ -1,18 +1,16 @@
 package messenger;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class StartUp 
 {
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args) throws IOException, SQLException
 	{
-		NichtKunde a = new NichtKunde("Pascal", "a", "b", "c", "d", "e", "f");
-		NichtKunde b = new NichtKunde("Lars", "g", "h", "i", "j", "k", "l");
+		Neo4j n = new Neo4j();
+		n.setUser("Pascal", "grillen");
+		n.setUser("Miri", "putzen");
 		
-		a.schreibeNachricht("Hallo g", b);
-		
-		Hbase hb = new Hbase();
-		hb.putImage(a.getuserId(), "haw.jpg");
-		hb.getImage(a.getuserId(), "haw.jpg");
+		n.setFriend("Pascal", "Miri");
 	}
 }

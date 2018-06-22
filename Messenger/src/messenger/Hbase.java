@@ -82,7 +82,7 @@ public class Hbase
 		System.out.println("Chatverlauf gespeichert.");
 	}
 	
-	public void putImage(String uid, String imageName) throws IOException
+	public void putImage(String uid, String imageName, String empfaenger) throws IOException
 	{
 		File f = new File("/home/nosql/Pictures/"+imageName);
 		BufferedImage bi = ImageIO.read(f);
@@ -91,8 +91,12 @@ public class Hbase
 		byte[] imageInBytes = baos.toByteArray();
 		
 		Put pn = new Put(Bytes.toBytes(uid));
-		pn.addColumn(Bytes.toBytes("Data"), Bytes.toBytes(imageName), imageInBytes);
+		pn.addColumn(Bytes.toBytes("Data"), Bytes.toBytes("gesendet an: "+empfaenger+" "+imageName), imageInBytes);
 		htable.put(pn);
+		
+		Put p = new Put(Bytes.toBytes(empfaenger));
+		p.addColumn(Bytes.toBytes("Data"), Bytes.toBytes("Absender: "+uid+" "+imageName), imageInBytes);
+		htable.put(p);
 		
 		System.out.println("Image gespeichert.");
 	}
@@ -123,6 +127,16 @@ public class Hbase
 		for(String s : list)
 		{
 			findValuesWithQualifier("Chat", s);
+		}
+	}
+	
+	public void getData(String userid) throws IOException 
+	{
+		List<String> list = listOfQualifiers(userid, "Data");
+		
+		for(String s : list)
+		{
+			getImage(userid, s);
 		}
 	}
 	
@@ -186,7 +200,7 @@ public class Hbase
 	 * @param mail Emailadresse
 	 * @throws IOException 
 	 */
-	public void setUser(String uid, String vname, String nname, String alter, String adress, String tel, String mail) throws IOException
+	public void setUser(String uid, String vname, String nname, String alter, String adress, String tel, String mail, String hobby) throws IOException
 	{
 		String u = getUser(uid);
 		
@@ -200,6 +214,7 @@ public class Hbase
 			putUser(uid, "Adress", adress);
 			putUser(uid, "Telefon", tel);
 			putUser(uid, "E-Mail", mail);
+			putUser(uid, "Hobby", hobby);
 			
 			System.out.println("User angelegt");
 		}
@@ -225,6 +240,7 @@ public class Hbase
 			byte [] adr = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("Adress"));
 			byte [] tel = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("Telefon"));
 			byte [] mail = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("E-Mail"));
+			byte [] hobby = result.getValue(Bytes.toBytes("PersonalData"), Bytes.toBytes("Hobby"));
 			
 			String vns = Bytes.toString(vn); 
 			String nns = Bytes.toString(nn);
@@ -232,6 +248,7 @@ public class Hbase
 			String adrs = Bytes.toString(adr);
 			String tels = Bytes.toString(tel); 
 			String mails = Bytes.toString(mail);
+			String hob = Bytes.toString(hobby);
 			
 			System.out.println("Vorname: "+vns);
 			System.out.println("Nachname: "+nns);
@@ -239,6 +256,7 @@ public class Hbase
 			System.out.println("Adresse: "+adrs);
 			System.out.println("Telefon: "+tels);
 			System.out.println("E-Mail: "+mails);
+			System.out.println("Hobby: "+hob);
 		}
 		catch (IOException e)
 		{
@@ -279,6 +297,7 @@ public class Hbase
 		}
 		return valList;
 	}
+	
 	
 	public List<String> findRowsWithQualifier(String columnFamily, String qualifier) throws IOException
 	{
