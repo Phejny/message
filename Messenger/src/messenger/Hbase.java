@@ -115,19 +115,22 @@ public class Hbase
 	}
 	
 	/**
-	 * Liefert die gesendeten Nachrichten und Empfaenger einse Users
+	 * Liefert die gesendeten und empfangene Nachrichten eines Users
 	 * @param userid - User
 	 * @param time - Datum und Uhrzeit des Chatverlaufs
 	 * @throws IOException 
 	 */
-	public void getMessages(String userid) throws IOException 
+	public List<String> getMessages(String userid) throws IOException 
 	{
 		List<String> list = listOfQualifiers(userid, "Chat");
+		List<String> mList = new ArrayList<>();
 		
 		for(String s : list)
 		{
-			findValuesWithQualifier("Chat", s);
+			mList.add(getValueWithQualifier("Chat", s));
 		}
+		
+		return mList;
 	}
 	
 	public void getData(String userid) throws IOException 
@@ -293,11 +296,26 @@ public class Hbase
 		List<String> valList = new ArrayList<String>();
 		for (Result r : scanner)
 		{
-			System.out.println((Bytes.toString(r.value())));
+			valList.add((Bytes.toString(r.value())));
 		}
+		
 		return valList;
 	}
 	
+	public String getValueWithQualifier(String columnFamily, String qualifier) throws IOException
+	{
+		String value = "geht nicht";
+		Scan s = new Scan();
+		s.addColumn(Bytes.toBytes(columnFamily), Bytes.toBytes(qualifier));
+		ResultScanner scanner = htable.getScanner(s);
+		for(Result r : scanner)
+		{
+			value = Bytes.toString(r.value());
+		}
+		
+		return value;
+	}
+		
 	
 	public List<String> findRowsWithQualifier(String columnFamily, String qualifier) throws IOException
 	{

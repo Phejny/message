@@ -11,7 +11,11 @@ public class StartUp
 	public static void main(String[] args) throws IOException, SQLException
 	{
 		MapReduce p = new MapReduce();
-		List<String> list = new ArrayList<String>(Arrays.asList("Peter", "Hans", "Hans","franz", "hans"));
+		Hbase h = new Hbase();
+		
+		List<String> list = h.getMessages("Pascal");
+		
 		p.wordCount(list);
+		
 	}
 }
