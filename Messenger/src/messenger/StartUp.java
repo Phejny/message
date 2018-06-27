@@ -2,15 +2,16 @@ package messenger;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class StartUp 
 {
 	public static void main(String[] args) throws IOException, SQLException
 	{
-		Neo4j n = new Neo4j();
-		n.setUser("Pascal", "grillen");
-		n.setUser("Miri", "putzen");
-		
-		n.setFriend("Pascal", "Miri");
+		MapReduce p = new MapReduce();
+		List<String> list = new ArrayList<String>(Arrays.asList("Peter", "Hans", "Hans","franz", "hans"));
+		p.wordCount(list);
 	}
 }
