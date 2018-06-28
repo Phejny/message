@@ -1,0 +1,1432 @@
+SPD
+CDU
+CSU
+GRÜNE
+FDP
+DIE LINKE
+AfD
+Die PARTEI
+PIRATEN
+FREIE WÄHLER
+ÖDP
+BP
+REP
+NPD
+SSW
+Bündnis C
+DM
+DKP
+LKR
+MLPD
+Tierschutzpartei
+V-Partei³
+DSU
+Volksabstimmung
+BüSo
+BIG
+Die Violetten
+FREIE WÄHLER
+FAMILIE
+ZENTRUM
+keine Kurzbezeichnung
+MENSCHLICHE WELT
+Die Humanisten
+DIE FRAUEN
+HUMANWIRTSCHAFT
+PARTEI DER VERNUNFT
+MG
+DIE FRANKEN
+LIBERALE
+du.
+BGE
+SGP
+Bergpartei
+KPD
+Tierschutzallianz
+Gesundheitsforschung
+BGD
+AUFBRUCH C
+LD
+FBM
+UNABHÄNGIGE
+Die Achtsamen
+ARMINIUS – Bund
+DL
+LUPe
+MIETERPARTEI
+Die Grauen
+JED
+UPR
+DLF
+NPA
+LO
+GU
+PG
+PCF
+PRG
+PS
+MRC
+FI
+LGM
+EELV
+MEI
+PE
+LREM
+MoDem
+LC
+RAD
+UDI
+LR
+CNI, CNIP
+MPF
+FN
+LDS
+Demokraten
+Republikaner
+Trump
+Obama
+Merkel
+Erhard
+Adenauer
+Kiesinger
+Brandt
+Schmidt
+Kohl
+Schröder
+Steinmeier
+Gauck
+Wulff
+Köhler
+Rau
+Herzog
+Weizsäcker
+Carstens
+Scheel
+Heinemann
+Lübke
+Heuss
+George Washington
+John Adams
+Thomas Jefferson
+James Madison
+James Monroe
+John Quincy Adams
+Andrew Jackson
+Martin van Buren
+William Henry Harrison
+John Tyler
+James Polk
+Zachary Taylor
+Millard Fillmore
+Franklin Pierce
+James Buchanan
+Abraham Lincoln
+Andrew Johnson
+Ulysses S. Grant
+Rutherford B. Hayes
+James Abram Garfield
+Chester Alan Arthur
+Grover Cleveland
+Benjamin Harrison
+Grover Cleveland
+William McKinley
+Theodore Roosevelt
+William Howard Taft
+Woodrow (Thomas) Wilson
+Warren Gamaliel Harding
+Calvin (John) Coolidge
+Herbert Clark Hoover
+Franklin Delano Roosevelt
+Harry S. Truman
+Dwight (David) Eisenhower
+John Fitzgerald Kennedy
+Lyndon Baines Johnson
+Richard Milhouse Nixon
+Gerald Rudolph Ford
+Jimmy Carter
+Ronald Wilson Regan
+George Herbert Walker Bush
+William (Bill) Jefferson Clinton
+George Walker Bush
+Barack Hussein Obama
+Macht
+Staat
+Führung
+Hierarchie / Herrschaft
+Ordnung
+Frieden
+Freiheit
+Demokratie
+Konsens
+Konflikt
+Kampf
+Klassenkampf
+Abgeordnete
+Abgeordnetenhaus
+ABM
+Absolute Mehrheit
+Ältestenrat
+Amtsgericht
+Anfrage
+Angeklagter
+Antisemitismus
+Arbeitsgericht
+Arbeitslosigkeit
+Arbeitslosenquote
+ARD
+Assimilation
+Asyl
+Asylbewerber
+Ausgleichsmandat
+Ausländerfeindlichkeit
+Autonome
+BaföG
+Berufung
+BGB
+Bruttoinlandsprodukt (BIP)
+Bruttosozialprodukt (BSP)
+Bund
+Bundesjugendring
+Bundeskanzlerin/Bundeskanzler
+Bundesländer
+Bundesministerien
+Bundespräsident/Bundespräsidentin
+Bundesrat
+Bundesregierung
+Bundesstaat
+Bundestag
+Bundestagswahl
+Bundesverfassungsgericht
+Bundesversammlung
+Bundeswehr
+Bundeszentrale für politische Bildung/bpb
+Bündnis '90/ Die Grünen
+Bürger in Wut
+Bürgerliches Recht
+Bürgerinitiative
+Bürgerschaft
+DDR
+Delegierter
+Demografie/demografisch
+Demokratie
+Demonstrationsrecht
+Demoskopie
+Diäten
+Die Linke
+Direkte Demokratie
+Direktkandidat
+Direktmandat
+DM
+Dritte Welt
+Duldung
+Embargo
+Enquetekommission
+Entwicklungshilfe
+Entwicklungsländer
+Erststimme
+Erwerbsarbeit
+Erwerbstätige
+EU
+Euro (EUR)
+Europarat
+Exekutive
+Extremistisch/Extremismus
+EZB
+Föderalismus
+Fraktion
+Freie Wähler
+Freiheitliche demokratische Grundordnung
+Fremdenfeindlichkeit
+Fünf-Prozent-Klausel
+Föderalismusreform
+Gemeinde
+Gerichtsbarkeit
+Gesetz
+Gesetzgebung
+Gewaltenteilung
+Gewerkschaft
+GG
+Gleichberechtigung
+Globalisierung
+Große Koalition
+Grundgesetz
+Grüne
+Grüne Jugend
+Grund- und Menschenrechte
+Handelsbeschränkungen
+Haushaltsplan
+Heranwachsender
+Hochrechnung
+Hartz IV
+Immunität
+Imperatives Mandat
+Innerparteiliche Demokratie
+Instanz
+Integration/integriert
+Interessenverband
+Judikative
+Jugendgericht
+Jugendlicher
+Jugendverband
+Junge Liberale
+Junge Union
+Jungsozialisten
+JungdemokratInnen / Junge Linke
+Kabinett
+Kanzlerkandidat
+Kind
+Koalition
+Koalitionsvertrag
+Konjunktur
+Konservativ/Konservativismus
+Konstruktives Misstrauensvotum
+KPD
+Kumulieren
+Länder
+Landesjugendring
+Landtag
+Lebenshaltungskosten
+Legal
+Legislative
+Legitim
+Legitimation
+Lesung
+Liberal/Liberalismus
+Links
+Linkspartei
+Lobby
+Linksjugend ['solid]
+Marktwirtschaft
+Massenmedien
+Mehrheit
+Mehrheitswahl
+Mehrparteienprinzip
+Meinungsfreiheit
+Menschenrechte
+Menschenwürde
+Militant
+Minderjähriger
+Mitbestimmung
+Monarchie
+Minderheitsregierung
+Nation
+Nationalhymne
+Nationalismus
+NATO
+Naturrecht
+Neonazi
+NPD
+Öffentliche Meinung
+Öffentlicher Dienst
+Öffentliches Recht
+Opposition
+Ordnungswidrigkeit
+Panaschieren
+Parlament
+Parteien
+Parteiendemokratie
+Parteienfinanzierung
+Parteiprogramm
+Parteispenden
+Parteiverbot
+Partizipation
+PDS
+Petition
+Piratenpartei
+Plebiszit
+Plenum
+Politik
+Populistisch/Populist
+Pressefreiheit
+Privatrecht
+Quorum
+Radikal
+Rassismus
+Rechts
+Rechts-Links-Schema
+Rechtsmittel
+Rechtsnorm
+Rechtsprechung
+Rechtsstaat
+Referendum
+Regierungskoalition
+Reichstag
+Relative Mehrheit
+Repräsentative Demokratie
+Revision
+Ring politischer Jugend
+Schengener Abkommen
+Schuldenbremse
+SED
+
+Sozialismus
+Sozialpolitik
+Sozialstaat
+SPD
+Splitting
+Staatsanwalt
+Steuern
+StGB
+Stichwahl
+Stimmensplitting
+Strafgesetzbuch
+Strafprozess
+Straftat
+Streitbare Demokratie
+Südschleswigsche Wählerverband
+Tag der deutschen Einheit
+Tarifautonomie
+Tarifpartner
+Tarifvertrag
+Überhangmandat
+UN
+Unionsbürger
+Untersuchungsausschuss
+Verein
+Vereinte Nationen
+Verfassung
+Verfassungsbeschwerde
+Verfassungsschutz
+Verhältniswahl
+Vermittlungsausschuss
+Versammlungsfreiheit
+Verwaltungsgericht
+Volksentscheid
+Volkspartei
+Volkssouveränität
+Volljähriger
+Wahlen
+Wahlrecht
+Wehrbeauftragter
+Wehrdienst
+Wehrhafte Demokratie
+Wehrpflicht
+ZDF
+Zeitungen
+Zivildienst
+Zivilprozess
+Zuwanderung
+Aristokratie
+Audienz
+Büro
+Deklaration
+Demokratie
+Despot
+Diktatur
+Jurisdiktion
+Kaiser
+Kanzler
+Kongress
+Konstitution
+Konsultation
+Krone
+legal, legitim, Legislative
+Majorität
+Mandat
+Minister
+Minorität
+Monarchie
+Nation
+Oligarchie
+Parlament
+Partei
+Plan
+Präsident
+Regierung
+Republik
+Sekretär
+Staat
+Votum
+Anarchismus
+Christentum
+Dezisionismus
+Faschismus
+Kapitalismus
+katholisch
+Kommunismus
+konservativ
+liberal
+Patrizier
+Plebejer
+progressiv
+evangelisch
+sozial
+Sozialismus
+Administration
+Armee
+Bataillon
+Division
+Exekution
+Finanzen
+General
+Kader
+Kaserne
+Kataster
+Kommune
+Major
+Marine
+Militär
+Polizei
+Regiment
+Soldat
+Straße
+zivil
+Zoll
+Börse
+Direktor
+Firma
+Intelligenz (als soziale Schicht)
+Interessen
+Kirche
+Klasse
+Kommerz
+Konferenz
+Konfession
+Konjunktur
+Konkurrenz
+Konsum
+Meister
+Offizier
+Ökonomie
+Presse
+Proletariat
+Publikum, publik, Publizität
+Religion
+Schule
+Universität
+Föderation
+imperial
+Kontribution
+Union
+Adel
+Amt
+Burg 
+Fürst 
+Gericht
+Gesetz
+Graf
+Grenze
+König
+Kreis
+Kür, Kurfürst
+Land
+Lehen
+Rat
+Recht
+Reich
+Schloß
+Stadt
+Stand
+Vasall
+Vaterland
+Verfassung
+Volk
+Wahl
+Widerstand
+Bolschewismus
+Bürger
+feudal
+Grüne 
+Putsch 
+volkstümlich 
+Widertäufer
+Angriff
+Gewehr
+Heer
+Kolchose
+Oberst
+Verteidigung
+Bank
+Beruf
+Geld
+Gewerbe
+Handel
+Unternehmen
+Wirtschaft
+Bund
+Frieden
+Krieg
+ABC-Waffen
+Abgabe
+ABGB
+Abgeordneter/Abgeordnete
+Abschiebung
+Abschwung
+Absolutismus
+Achtundsechziger-Generation
+Adelige
+Afrikanische Union
+Agenda 2030
+Agenda 21
+Agentur für Grundrechte
+Aktie
+Alleinregierung
+Alliierte
+alternative Energie
+Alternativer Nobelpreis
+Amnestie
+Amnesty International
+Amt
+Analphabet/Analphabetin
+Anarchie
+Anfrage
+Angelobung
+Anklage
+Antisemitismus
+Apartheid
+APO
+Arbeitgeber
+Arbeitnehmer
+Arbeitskampf
+Arbeitslosengeld
+Arbeitslosenversicherung
+Arbeitslosigkeit
+Arbeitsmarkt/ Arbeitsmarktpolitik
+Arbeitsmarktservice
+Arbeitsrecht
+Arbeitszeit
+Aristokratie
+Armee
+Armut
+Armutsflüchtling
+Armutsgefährdung
+Asyl
+Asylwerber/Asylwerberin
+Atomkraft
+Attentat
+ATX (Austrian Traded Index)
+Aufklärung
+Aufschwung
+Ausbildungspflicht
+Ausländer/Ausländerin
+Ausländerfeindlichkeit
+Auslieferungsantrag
+Ausschuss
+Außerparlamentarische Opposition
+Aussperrung
+Austrofaschismus
+Auswanderung
+Autarkie
+Autonomie
+Autoritäres System
+Bankenkrise
+Bannmeile
+Barrel
+Beamter/Beamtin
+Bedarfsorientierte Mindestsicherung
+Begnadigung
+Behindertenpass
+Behörde
+Beirat für Wirtschafts- und Sozialfragen
+Berufsinformation
+Bestechung
+Betriebsrat
+Bevölkerungsentwicklung
+Bezirk
+Bezug/Lohn/Gehalt
+Bildungsdokumentation
+Bildungsministerium
+Bildungswesen
+Binnenflüchtling
+Blauhelme
+Blockade
+Blockfreie
+Bodenreform
+Bologna Prozess
+Börse
+Botschaft
+Briefwahl
+Brüderlichkeit
+Bruttoinlandsprodukt
+Bruttolohn
+Buddhismus
+Budget
+Bund/Bundesland
+Bundesheer
+Bundeshymne
+Bundesjugendvertretung
+Bundeskanzler/ Bundeskanzlerin
+Bundeskanzleramt
+Bundesland
+Bundesliste
+Bundesminister/ Bundesministerin
+Bundespolizei
+Bundespräsident/ Bundespräsidentin
+Bundesrat
+Bundesregierung
+BundesschülerInnenvertretung
+Bundesstaat
+Bundesversammlung
+Bundeswettbewerbsbehörde
+Bürger/Bürgerin
+Bürgerinitiative
+Bürgerkrieg
+Bürgermeister/ Bürgermeisterin
+Bürgerrechte
+Bürgerschaft
+Bürokratie
+BZÖ
+Chancengleichheit
+Charta der Grundrechte der EU
+Chauvinismus
+Christentum
+Copyright
+Cyber-Mobbing
+Datenschutz
+Deflation
+Delegation
+Demagogie
+Demografie
+Demokratie
+Demokratiewerkstatt
+Demokratische Systeme
+Demonstration
+Demoskopie
+Denkmal
+Denkmalschutz
+Denunziation
+Depression
+Devisenbilanz
+Diaspora
+Diensteid
+Dienstleistung
+Diffamieren
+Diktatur
+Diplomat/Diplomatin
+diplomatische Vertretung
+Direkte Demokratie
+Diskriminierung
+Diversität/Diversity
+Diversity Mainstreaming
+Diversity Management
+Dividende
+Doktrin
+Doppelstaatsbürgerschaft
+Dow Jones
+dritte Generation
+Dritte Welt
+Drittlandklausel
+Dschihadismus
+DVR-Nummer
+Dynastie
+e-card
+E-Demokratie
+E-Government
+E-Partizipation
+E-Voting
+Egalitär
+Ehrenamt
+Eid
+Einbürgerung
+Einbürgerungstest
+Eiserner Vorhang
+Elternsprache
+Embargo
+Emigration
+Emission/Emissionshandel
+Emissionen
+Emissionshandel
+Empowerment
+Energiepolitik
+Enklave
+Enquete
+Entschuldung
+Entwicklungsland
+Entwicklungspolitik
+Entwicklungszusammenarbeit
+Erinnern
+Erneuerbare Energie
+Erste Republik
+Erster Weltkrieg
+Erziehungsberechtigter/ Erziehungsberechtigte
+Etat
+Ethik
+Ethnische „Säuberung“
+EU
+EU-Erweiterung
+Euro
+Euro-Atlantischer Partnerschaftsrat
+Europa
+Europa-Flagge
+Europa-Hymne
+Europäische Atomgemeinschaft
+Europäische Bürgerinitiative
+Europäische Gemeinschaft
+Europäische Gemeinschaft für Kohle und Stahl
+europäische Identität
+Europäische Kommission
+Europäische Sicherheits- und Verteidigungspolitik
+Europäische Union
+Europäische Wirtschaftsgemeinschaft
+Europäische Zentralbank
+Europäischer Gerichtshof
+Europäischer Gerichtshof für Menschenrechte
+Europäischer Rat
+Europäisches Parlament
+Europarat
+Europol
+Euthanasie
+Exekutive
+Exil
+Exklave
+Extremismus/Radikalismus
+facebook
+Fahne
+Fairnessabkommen
+Familie
+Familienbeihilfe
+Familienrecht
+Fanatismus
+Faschismus
+Feminismus
+Fertilitätsrate
+Feudalismus
+FGM
+Finanzausgleich
+Finanzen
+Finanztransaktionssteuer
+Flagge
+Flüchtling
+Flüchtlingshilfswerk
+Föderalismus
+Folter
+FPÖ
+Fraktion
+Französische Revolution
+Frauenbewegung
+Frauenhandel
+Frauenquote
+Frauentag
+Frauenwahlrecht
+Freie Marktwirtschaft
+Freihandelszone
+Freiheit
+Freizügigkeit
+Fremdenfeindlichkeit
+Fremdenpass
+Frieden
+Friedensnobelpreis
+Friedenstruppe
+Fristenregelung
+Führungszeugnis
+Fundamentalismus
+G8
+Gastarbeiter/ Gastarbeiterin
+GATT
+GAU
+Gebietskörperschaft
+Gebühr
+Geburtenrate
+Gedenkstätte
+Gefängnis
+Gehalt
+Geheimdienst
+Geld
+Geldstrafe
+Gemeinde
+Gemeinderat
+Gemeindevertretung
+Gemeindevorstand
+Gemeinnützigkeit
+Gender Mainstreaming
+Generation
+Generation Praktikum
+Generationenkonflikt
+Generationenvertrag
+Genfer Flüchtlingskonvention
+Genozid
+Gentechnologie
+Gerechtigkeit
+Gericht
+Gericht für den öffentlichen Dienst
+Gerichtsbarkeit
+Gerichtsbezirk
+Gerichtshof der Europäischen Union
+Gerontokratie
+Geschäftsfähigkeit
+Geschlechtsspezifische Gewalt
+Geschwisterlichkeit
+Geschworene
+Gesellschaft
+Gesellschaftsvertrag
+Gesetz
+Gesetzgebung
+Gewalt 2.0/ Gewalt im Internet
+Gewaltenteilung/ Gewaltentrennung
+Gewaltmonopol
+Gewaltprävention
+Gewaltschutzgesetz
+Gewerkschaft
+Ghetto
+Gleichberechtigung
+Gleichheit
+Globale Erwärmung
+Globalisierung
+Gouverneur/Gouverneurin
+Grauer Markt
+Grenze
+Grundrechte
+Grundsicherung
+Grundversorgung
+Grundwehrdienst
+Grüne
+Guerillakrieg
+Gulag
+Haager Abkommen
+Haftbefehl
+Haftstrafe
+Hainburg
+Handelsabkommen
+Hate Speech/Hassrede
+Hauptstadt
+Haushalt
+Heeresabwehramt
+Heimatland
+Herrschaftsform
+Hierarchie
+Hinduismus
+Höchstgericht
+Hoheitsgebiet
+Hoheitszeichen
+Holocaust
+Humanismus
+Identität 
+Ideologie
+Immigration
+Immunität
+Indoktrination
+Industrialisierung
+Industriestaat
+Inflation
+Informationsfreiheit
+Infrastruktur
+Inklusion/Exklusion
+Innere Sicherheit
+Innovation
+Institution
+Integration
+Interessenverband
+Interessenvertretung
+Interkulturelles Lernen/ Interkulturalität
+Internationaler Gerichtshof
+Internationaler Strafgerichtshof
+Internationaler Währungsfonds
+Islam
+Islamismus
+IWF
+Jihadismus
+Journalismus
+Judentum
+Judikative
+Jugendgemeinderat
+Jugendkriminalität
+Jugendkultur
+Jugendorganisation
+Jugendparlament
+Jugendpolitik
+Jugendschutzgesetz
+Jugendstrafrecht
+juristische Person
+Kabinett
+Kalter Krieg
+Kammer
+Kampfeinsätze
+Kampfverbände
+Kandidat/Kandidatin
+Kapitalbilanz
+Kapitalismus
+Kapitalmarkt
+Kartellaufsicht
+Katastrophenhilfe
+Katastrophenschutz
+Kinder- und Jugendanwaltschaft
+Kinderarbeit
+Kinderarmut
+Kinderbetreuungsgeld
+Kinderhandel
+Kinderpornografie
+Kinderrechte/ Kinderrechtskonvention
+Kindersoldat/ Kindersoldatin
+Klausurtagung
+Klimaflüchtling
+Klimawandel
+Klonen
+Klubzwang
+Koalition
+Koalitionsregierung
+Kollateralschaden
+Kollektivlohn
+Kollektivvertrag
+Kolonialismus
+Kommissar
+Kommission
+Kommune
+Kommunikation
+Kommunismus
+Kompetenz
+Kompromiss
+Konflikt
+Konfliktlösung
+Konjunktur
+Konkordat
+Konkurrenz
+Konkurs
+Konsens
+Konservatismus
+Konsulat
+Konsumentenschutz
+Konvention
+Konvergenzkriterien
+Konzentrationslager
+Konzentrationsregierung
+Konzern
+Korruption
+KPÖ
+Kredit
+Krieg
+Kriegsrecht
+Kriegsverbrechen
+Krise/Krisenstab
+Kultur
+Kulturerbe
+Kündigungsschutz
+Kuratorium
+Kyoto-Protokoll
+Laissez-faire
+Landeshauptleutekonferenz
+Landeshauptmann/ Landeshauptfrau
+Landesliste
+Landesrat/Landesrätin
+Landesregierung
+LandesstatthalterIn
+Landesverrat
+Landesverteidigung
+Landfriedensbruch
+Landtag
+Lauschangriff
+Lebenserwartung
+Lebenshaltungskosten
+Legislative
+Legislaturperiode
+Leistungsbilanz
+Liberalismus
+LiF (Liberales Forum)
+Links/Rechts
+Linksextremismus
+Lobby/Lobbyismus
+Lohn
+Lohnnebenkosten
+Lost Generation
+Macht
+Magistrat
+Mandat
+Manifest
+Manipulation
+Marktwirtschaft
+Marshallplan
+Massenvernichtungswaffen
+Materialismus
+Maut
+Mediation
+Medien
+Mediendemokratie
+Mehrheitsprinzip
+Mehrheitswahl
+Meinungsforschung
+Meinungsfreiheit
+Meldestelle
+Menschenhandel
+Menschenrechte
+Menschenrechtsbeirat
+Menschenwürde
+Migration
+Migrationssaldo
+Militär
+Milizheer
+Minderheit
+Minderheitsregierung
+Mindestlohn
+Mindestpension
+Minister/Ministerin
+Ministerbüro
+Ministerrat
+Minorität
+Misstrauensantrag
+Mitbestimmung
+Mittelstand
+Mobbing
+Mobilisierung
+Mobilmachung
+Monarchie
+Monopol
+Moskauer Memorandum
+Mündigkeit
+Mutter-Kind-Pass
+Nachhaltigkeit
+Nachkriegsjustiz
+Nachrichtendienst
+Nahostkonflikt
+Namensliste
+Nation
+Nationalbank
+Nationale Minderheit
+Nationaler Sicherheitsrat
+Nationalfeiertag
+Nationalhymne
+Nationalismus
+Nationalität/ Nationalitäten
+Nationalökonomie
+Nationalrat
+Nationalratspräsident/ Nationalratspräsidentin
+Nationalratspräsidium
+Nationalratswahl
+Nationalsozialismus
+NATO
+Naturerbe
+Naturkatastrophe
+Negativwachstum
+Neonazismus
+Nepotismus
+Nettolohn
+Nettozahler
+Neue soziale Bewegungen
+Neutralität
+Neuwahlen
+NGO
+Nichtangriffspakt
+Nobelpreis
+Nord-Süd-Konflikt
+Nordatlantikpakt
+Notpass
+Notstandshilfe
+Novelle
+NS-Verbrechen
+Nullwachstum
+Oberbefehlshaber/ Oberbefehlshaberin
+OECD
+Oesterreichische Nationalbank
+Öffentliche Hand
+Öffentliche Ordnung
+Ökologie
+Oligarchie
+Ombudsmann/Ombudsfrau
+OPEC
+Opposition
+ORF
+Organ
+Ost-West-Konflikt
+OSZE
+ÖVP
+Paramilitärisch
+Parlament
+Parlamentarismus
+Parlamentsklub
+Partei
+Parteienfinanzierung
+Parteifarben
+Partisane/Partisanin
+Partizipation
+Partnerschaft für den Frieden
+Partnership for Peace
+Pass
+Patentrecht
+Patriotismus
+Pazifismus
+Pendlerpauschale
+Pension
+Pensionsantrittsalter
+Personalausweis
+Petersberger Aufgaben
+Petition
+Pflegegeld
+Pflichtverteidiger
+Pfusch
+PISA-Studie
+Planwirtschaft
+Plebiszit
+Plenum
+Pluralismus
+Pogrom
+PolitfanatikerInnen
+Political Correctness
+Politik
+Politikblog
+Politikverdrossenheit
+Politische Bildung
+Politische Kultur
+Politische Partei
+Politische Willensbildung
+Politisches Lager
+Polizei
+Populismus
+Positive Diskriminierung
+Pragmatisierung
+Präsenzdienst
+Präsident/Präsidentin
+Präsidentschaftskanzlei
+Präsidialsystem
+Presse
+Pressefreiheit
+Presserecht
+Pressesprecher/ Pressesprecherin
+Printmedien
+Privatisierung
+Privatkonkurs
+Privatpension
+Privatrecht
+Prognose
+Propaganda
+Proportionalität
+Proporz
+Protest
+Prozenthürde
+Putsch
+Radikalisierung
+RAF
+Rassismus
+Rat der Europäischen Union
+Ratifikation
+Rechnungshof
+Rechts/Links
+Rechtsanwalt/ Rechtsanwältin
+Rechtsextremismus
+Rechtsfähigkeit
+Rechtsinformationssystem
+Rechtsprechung
+Rechtsstaat
+Rechtsweg
+Redaktion
+Rederecht
+Referendum
+Reform
+Regierung
+Regierungsbildung
+Region
+Reisepass
+Religion
+Rente
+Republik
+Republik Österreich
+Resolution
+Ressort
+Ressourcen
+Revolution
+Rezession
+Richter/Richterin
+Rollenverzicht
+Roma und Sinti
+Rotes Kreuz
+Sachwalterschaft
+Säkularisierung
+Scharia
+Schattenwirtschaft
+Schengener Abkommen
+Schlepperei
+Schoah
+Schuldemokratie
+Schulpartnerschaft
+Schulpflicht/ Ausbildungspflicht
+Schutzzone
+Schwarzarbeit
+Schwarzmarkt
+Schwellenland
+Sektor
+Sekundäranalphabetismus
+Selbstbestimmung
+Selbstverwaltung
+Senat
+Sicherheitskonferenz
+Sicherheitspolitik
+Sicherheitsrat
+Sklaverei
+Söldner/Söldnerin
+Solidarität
+Souveränität
+Soziale Marktwirtschaft
+Soziale Netzwerke
+Sozialhilfe
+Sozialismus
+Sozialleistung
+Sozialpartnerschaft
+Sozialquote
+Sozialstaat
+Sozialversicherung
+Soziologie
+Spekulationen
+Spionage
+SPÖ
+Staat
+Staatenbund
+Staatsanwaltschaft
+Staatsbürger/ Staatsbürgerin
+Staatsbürgerschaft
+Staatsgebiet
+Staatsoberhaupt
+Staatsräson
+StaatssekretärInnen
+Staatsstreich
+Staatsvertrag
+Stabilitäts- und Wachstumspakt
+Stadtrat/Stadträtin
+Stadtsenat
+Stand/Stände
+Ständestaat
+Statistik Austria
+Statutargemeinde
+Stellvertreterkrieg
+Sterbehilfe
+Sterberate
+Steuer
+Stichwahl
+Stipendium
+Strafgesetzbuch
+Strafmündigkeit
+Strafregisterbescheinigung
+Straftat
+Strafverteidiger/ Strafverteidigerin
+Streik
+Streitkräfte
+Strukturwandel
+Studentenbewegung
+subsidiärer Schutz
+Subsidiarität
+Subvention
+Terrorismus
+Tobin-tax
+Todesstrafe
+Toleranz
+Totalitarismus
+Transferleistungen
+Transitverkehr
+Transparenz/ Transparenzgesetz
+Transparenzpaket
+Treuegelöbnis
+Tribunal
+Tschernobyl
+Twitter
+Überwachung
+Ultimatum
+Umweltflüchtling
+Umweltschutz
+Umweltzertifikate
+Unabhängigkeit
+UNESCO
+UNHCR
+UNICEF
+Universalität der Menschenrechte
+UNO
+UNO-Friedenstruppe
+Unteilbarkeit der Menschenrechte
+Unterhalt
+Unterrichtspflicht
+Untersuchungsausschuss
+Untersuchungshaft
+Unvereinbarkeitsgesetz
+Urheberrecht
+Utopie
+Verbotsgesetz
+Verbraucherpreisindex
+Verbrechen
+Vereidigung
+Verein
+Vereinte Nationen
+Verfassung
+Verfassungsgerichtshof
+Vergehen
+Verhältniswahl
+Verhetzung
+Vernichtungslager
+Verordnungen
+Versammlungsfreiheit
+Verschuldung
+Verteidiger/Verteidigerin
+Verteilung
+Vertrag von Lissabon
+Vertrag von Maastricht
+Vertriebene
+Verwaltung
+Verwaltungseinheit
+Verwaltungsgerichtshof
+Veto
+Vetternwirtschaft
+Vielfalt
+Vierprozenthürde
+vierte Gewalt
+Visum
+Vizekanzler/Vizekanzlerin
+Volk
+Völkerbund
+Völkermord
+Völkerrecht
+Volksabstimmung
+Volksanwaltschaft
+Volksbefragung
+Volksbegehren
+Volksentscheid
+Volksgruppe
+Volkswirtschaft
+Volkszählung
+Volljährigkeit
+Vormundschaft
+Vorurteil
+Vorzugsstimme
+Vorzugsstimmen-Mandat
+Vorzugsstimmen-Wahlkampf
+Waffengesetz
+Wahl
+Wahlkampf
+Wahlkarte
+Wahlpflicht
+Wahlrecht
+Wahlsystem
+Währung
+Währungsreform
+Währungsunion
+Wappen
+Warenkorb
+Warenverkehr
+Wehrpflicht
+Weibliche Genitalverstümmelung
+Weltbank
+Welterbeliste
+Weltgesundheitsorganisation
+Weltkrieg
+Weltkulturerbe
+Weltwirtschaftsgipfel
+Werbung
+Werknutzung
+Werte
+Wettbewerb
+WHO
+Widerstand
+Wirtschaft
+Wirtschafts- und Sozialpartnerschaft
+Wirtschaftsaufschwung
+Wirtschaftskrise
+Wirtschaftsordnung
+Wirtschaftspolitik
+Wirtschaftsstandort
+Wirtschaftszyklus
+WTO
+Würde
+Zahlungsbilanz
+Zahlungsmittel
+Zeitung
+Zensur
+Zentrales Personenstandsregister (ZPR)
+Zentralismus
+Zionismus
+Zivilcourage
+Zivildienst
+Zivilgesellschaft
+Zivilisation
+Zivilist/Zivilistin
+Zivilrecht
+Zoll
+Zwangsheirat/ Zwangsverheiratung
+Zweidrittelmehrheit
+Zweikammernsystem
+zweite Generation
+Zweite Republik
+Zweiter Weltkrieg
+Zwentendorf
