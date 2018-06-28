@@ -7,23 +7,20 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.neo4j.driver.v1.types.MapAccessor;
+
 public class StartUp 
 {
 	public static void main(String[] args) throws IOException, SQLException
 	{
 		
-		
-		DataGenerator g = new DataGenerator();
-		
-		long s = System.currentTimeMillis();
-		g.fillDatabase(2000);
-		long e = System.currentTimeMillis() - s;
-		long sek = e/1000;
-		System.out.println("Sekunden: "+sek);
-		
-		
-	
-	
+		Hbase h = new Hbase();
+		List<String> list = h.getRowKeys();
+			
+		for(String s : list)
+		{
+			System.out.println(s);
+		}
 		
 	}
 }

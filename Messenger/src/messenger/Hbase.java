@@ -97,11 +97,11 @@ public class Hbase
 		byte[] imageInBytes = baos.toByteArray();
 		
 		Put pn = new Put(Bytes.toBytes(uid));
-		pn.addColumn(Bytes.toBytes("Data"), Bytes.toBytes("gesendet an: "+empfaenger+" "+imageName), imageInBytes);
+		pn.addColumn(Bytes.toBytes("Data"), Bytes.toBytes(imageName), imageInBytes);
 		htable.put(pn);
 		
 		Put p = new Put(Bytes.toBytes(empfaenger));
-		p.addColumn(Bytes.toBytes("Data"), Bytes.toBytes("Absender: "+uid+" "+imageName), imageInBytes);
+		p.addColumn(Bytes.toBytes("Data"), Bytes.toBytes(imageName), imageInBytes);
 		htable.put(p);
 		
 		System.out.println("Image gespeichert.");
@@ -111,7 +111,7 @@ public class Hbase
 	{
 		Get g = new Get(Bytes.toBytes(uid));
 		Result result = htable.get(g);
-		
+				
 		byte [] imageInByte = result.getValue(Bytes.toBytes("Data"), Bytes.toBytes(imageName));
 		InputStream in = new ByteArrayInputStream(imageInByte);
 		BufferedImage bi = ImageIO.read(in);

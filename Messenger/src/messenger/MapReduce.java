@@ -21,4 +21,25 @@ public class MapReduce
                 w -> w, w -> 1, Integer::sum));
         System.out.println(counts);
     }
+    
+    public void specificWordCount(List<String> wlist, String word)
+    {
+    	List<String> list = wlist;
+    	Stream<String> s = list.stream().map(w -> w.toLowerCase()).flatMap(Pattern.compile("\\s")::splitAsStream);
+        
+    	list = s.collect(Collectors.toList());
+    	String w = word.toLowerCase();
+    	
+    	int anzahl = 0;
+    	
+    	for(String ws : list)
+    	{
+    		if(ws.equals(w))
+    		{
+    			anzahl++;
+    		}
+    	}
+    	
+    	System.out.println(word+": "+anzahl);
+    }
 }
