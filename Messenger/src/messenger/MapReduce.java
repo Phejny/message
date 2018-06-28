@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 public class MapReduce
 {
+	
     public void wordCount(List<String> wlist)
     {
     	List<String> list = wlist;

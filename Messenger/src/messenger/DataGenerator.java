@@ -8,7 +8,8 @@ import java.nio.file.Paths;
 import java.util.stream.Stream;
 
 
-public class DataGenerator {
+public class DataGenerator 
+{
 
 	public static String getHobby() throws IOException{
     	String filename = "/Users/larsadler/Desktop/NoSql/sport.txt";

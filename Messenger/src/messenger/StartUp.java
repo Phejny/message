@@ -17,5 +17,6 @@ public class StartUp
 		
 		p.wordCount(list);
 		
+		
 	}
 }

@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 public class NichtKunde 
 {
+	
 	private String userId;
 	private String vorname;
 	private String nachname;

@@ -32,6 +32,7 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 public class Hbase 
 {
+	
 	private Connection con;
 	private Table htable;
 	
