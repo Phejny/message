@@ -180,7 +180,7 @@ public class DataGenerator
 			String email = getMail(vn, nn);
 			String hobby = hobbylist.get(Math.abs(gen.nextInt()) % hobbylist.size());
 			
-			kundenlist.add(new NichtKunde(vn+anzahl, vn, nn, age, adr, tel, email, hobby));
+			kundenlist.add(new NichtKunde(vn+i, vn, nn, age, adr, tel, email, hobby));
 		}
 		
 		Random nachricht = new Random();

@@ -15,8 +15,11 @@ public class StartUp
 		
 		DataGenerator g = new DataGenerator();
 		
-		
-		g.fillDatabase(10000);
+		long s = System.currentTimeMillis();
+		g.fillDatabase(2000);
+		long e = System.currentTimeMillis() - s;
+		long sek = e/1000;
+		System.out.println("Sekunden: "+sek);
 		
 		
 	

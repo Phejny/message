@@ -211,10 +211,10 @@ public class Hbase
 	 */
 	public void setUser(String uid, String vname, String nname, String alter, String adress, String tel, String mail, String hobby) throws IOException
 	{
-		String u = getUser(uid);
+		//String u = getUser(uid);
 		
-		if(!u.equals(uid))
-		{
+		//if(!u.equals(uid))
+		//{
 			System.out.println("User wird anglegt ...");
 			
 			putUser(uid, "Vorname", vname);
@@ -225,12 +225,12 @@ public class Hbase
 			putUser(uid, "E-Mail", mail);
 			putUser(uid, "Hobby", hobby);
 			
-			System.out.println("User angelegt");
-		}
-		else
-		{
-			System.out.println("User Vorhanden");
-		}
+			System.out.println("User angelegt"+uid);
+		//}
+		//else
+		//{
+			//System.out.println("User Vorhanden");
+		//}
 	}
 	
 	/**

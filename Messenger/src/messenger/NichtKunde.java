@@ -34,12 +34,11 @@ public class NichtKunde
 		
 		h = new Hbase();
 		
-		if(testeObVorhanden() == false)
-		{
+		
 			h.setUser(userId, vorname, nachname, alter, adress, telefon, eMail, hhobby);
 			Neo4j n = new Neo4j();
 			n.setUser(this.userId, this.hhobby);
-		}
+		
 	}
 	
 	/**
