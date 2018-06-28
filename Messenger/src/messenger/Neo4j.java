@@ -10,13 +10,7 @@ import java.sql.Statement;
 
 
 public class Neo4j 
-{
-
-	public Neo4j() throws SQLException
-	{
-		
-	}
-	
+{	
 	public void setUser(String userid, String hobby) throws SQLException
 	{
 		try(Connection con = DriverManager.getConnection("jdbc:neo4j:bolt://localhost", "neo4j", "bigdata"))

@@ -44,9 +44,10 @@ public class NichtKunde
 	
 	/**
 	 * @throws IOException 
+	 * @throws SQLException 
 	 * 
 	 */
-	public void schreibeNachricht(String message, NichtKunde empfaenger) throws IOException
+	public void schreibeNachricht(String message, NichtKunde empfaenger) throws IOException, SQLException
 	{
 		Hbase h = new Hbase();
 		h.setChatRecordSent(userId, empfaenger.getuserId(), message);

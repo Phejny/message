@@ -5,6 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.stream.Stream;
 
 
@@ -12,7 +16,7 @@ public class DataGenerator
 {
 
 	public static String getHobby() throws IOException{
-    	String filename = "/Users/larsadler/Desktop/NoSql/sport.txt";
+    	String filename = "/home/nosql/Desktop/eclipse/repo/Messenger/src/docs/sport.txt";
         
     	BufferedReader in = new BufferedReader(new FileReader(filename));
         int zeile = 0;
@@ -31,7 +35,7 @@ public class DataGenerator
     
     
     public static String getName() throws IOException{
-    	String filename = "/Users/larsadler/Desktop/NoSql/name.txt";
+    	String filename = "/home/nosql/Desktop/eclipse/repo/Messenger/src/docs/name.txt";
         
     	BufferedReader in = new BufferedReader(new FileReader(filename));
         int zeile = 0;
@@ -49,7 +53,7 @@ public class DataGenerator
     }
     
     public static String getVorname() throws IOException{
-    	String filename = "/Users/larsadler/Desktop/NoSql/vornamen.txt";
+    	String filename = "/home/nosql/Desktop/eclipse/repo/Messenger/src/docs/vornamen.txt";
         
     	BufferedReader in = new BufferedReader(new FileReader(filename));
         int zeile = 0;
@@ -74,7 +78,7 @@ public class DataGenerator
     }
     
     public static String getMail(String vorname, String nachname) throws IOException{
-    	String filename = "/Users/larsadler/Desktop/NoSql/mail.txt";
+    	String filename = "/home/nosql/Desktop/eclipse/repo/Messenger/src/docs/mail.txt";
         String mail = vorname + "." + nachname;
         String anbieter ="";
         
@@ -96,8 +100,8 @@ public class DataGenerator
     }
     
     public static String getAdresse() throws IOException{
-    	String filenameSta = "/Users/larsadler/Desktop/NoSql/stadt.txt";
-    	String filenameStr = "/Users/larsadler/Desktop/NoSql/strasse.txt";
+    	String filenameSta = "/home/nosql/Desktop/eclipse/repo/Messenger/src/docs/stadt.txt";
+    	String filenameStr = "/home/nosql/Desktop/eclipse/repo/Messenger/src/docs/strasse.txt";
     	
     	String stadt = "";
     	String strasse = "";
@@ -141,6 +145,57 @@ public class DataGenerator
         
         String tel = "0176" + telpast;
         return tel;
+    }
+    
+    public void fillDatabase(int anzahl) throws IOException, SQLException
+    {
+    	
+    	List<String> hobbylist = new ArrayList<>();
+    	List<String> namelist = new ArrayList<>();
+    	List<String> vornamelist = new ArrayList<>();
+    	List<Integer> alterlist = new ArrayList<>();
+    	List<String> adresslist = new ArrayList<>();
+    	List<String> telelist = new ArrayList<>();
+    	List<NichtKunde> kundenlist = new ArrayList<>();
+    	
+		for(int i = 0; i < anzahl; i++)
+		{
+			hobbylist.add(getHobby());
+			namelist.add(getName());
+			vornamelist.add(getVorname());
+			alterlist.add(getAlter());
+			adresslist.add(getAdresse());
+			telelist.add(getTelefon());
+		}
+		
+		
+		Random gen = new Random();
+		for (int i = 0; i < anzahl; i++) 
+		{
+			String vn = vornamelist.get(Math.abs(gen.nextInt()) % vornamelist.size());
+			String nn = namelist.get(Math.abs(gen.nextInt()) % namelist.size());
+			String age = String.valueOf(alterlist.get(Math.abs(gen.nextInt()) % alterlist.size()));
+			String adr = adresslist.get(Math.abs(gen.nextInt()) % adresslist.size());
+			String tel = telelist.get(Math.abs(gen.nextInt()) % telelist.size());
+			String email = getMail(vn, nn);
+			String hobby = hobbylist.get(Math.abs(gen.nextInt()) % hobbylist.size());
+			
+			kundenlist.add(new NichtKunde(vn+anzahl, vn, nn, age, adr, tel, email, hobby));
+		}
+		
+		Random nachricht = new Random();
+		for (int i = 0; i < anzahl; i++) 
+		{
+			String message = hobbylist.get(Math.abs(nachricht.nextInt()) % hobbylist.size()) +" "+ hobbylist.get(Math.abs(nachricht.nextInt()) % hobbylist.size()) +" "+ hobbylist.get(Math.abs(nachricht.nextInt()) % hobbylist.size());
+			NichtKunde a = kundenlist.get(Math.abs(nachricht.nextInt()) % kundenlist.size());
+			NichtKunde b = kundenlist.get(Math.abs(nachricht.nextInt()) % kundenlist.size());
+			
+			a.schreibeNachricht(message, b);
+		}
+		
+		
+		
+		
     }
 
 }

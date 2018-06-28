@@ -6,6 +6,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,16 +55,20 @@ public class Hbase
 	}
 	
 	/**
+	 * @throws SQLException 
 	 * 
 	 */
-	public void setChatRecordSent(String userId, String empfaenger, String message) throws IOException
+	public void setChatRecordSent(String userId, String empfaenger, String message) throws IOException, SQLException
 	{
 		LocalDateTime ldt = LocalDateTime.now();
 		String local = ldt.toString();
-				
+		Neo4j n = new Neo4j();
+		
 		Put pn = new Put(Bytes.toBytes(userId));
 		pn.addColumn(Bytes.toBytes("Chat"), Bytes.toBytes("gesendet_"+local),Bytes.toBytes("An: "+empfaenger+" gesendet am: "+local+" "+message));
 		htable.put(pn);
+		
+		n.setFriend(userId, empfaenger);
 		
 		System.out.println("Chatverlauf gespeichert.");
 	}
